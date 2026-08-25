@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 #   curl              -> testar a API (ex.: curl http://localhost:8080/produtos)
 #   unzip / zip       -> descompactar arquivos baixados
 # apt-get clean + rm  -> limpa o cache para a imagem ficar menor.
-RUN apt-get update && apt-get install -000y \
+RUN apt-get update && apt-get install -y \
     mysql-server-8.0 \
     git \
     git-lfs \
@@ -20,4 +20,3 @@ RUN apt-get update && apt-get install -000y \
     zip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-

@@ -9,7 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.Setter;
 import lombok.Getter;
 
@@ -25,6 +25,6 @@ public class Pagamento {
     private String status;
     private String tipo;
 
-    @ManyToOne
+    @OneToOne
     private Pedido pedido;
 }
